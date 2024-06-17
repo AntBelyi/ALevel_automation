@@ -1,5 +1,4 @@
 package hw_1;
-
 public class Task2 {
     public static void main(String[] args) {
 
@@ -8,9 +7,9 @@ public class Task2 {
         System.out.println(a);
         System.out.println(b);
 
-       int  c = a;
+       int  helper = a;
         a = b;
-        b = c;
+        b = helper;
         System.out.println(a);
         System.out.println(b);
 
