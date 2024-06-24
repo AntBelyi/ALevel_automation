@@ -47,6 +47,7 @@ public class App {
 
         // Conditional expressions
         // Comparison operations
+        /*
        int g = 5;
        int t = 7;
        boolean result = t == 7;
@@ -66,8 +67,8 @@ public class App {
        System.out.println(resultSix);
        System.out.println(resultSeven);
        System.out.println(resultEight);
-
-       //Logical operations
+       */
+       /* Logical operations
         boolean a1 = (4 > 1) || (3 > 7);
         boolean a2 = (4 < 1) || (3 > 7);
         boolean a3 = (4 > 1) && (3 > 7);
@@ -81,7 +82,7 @@ public class App {
         System.out.println(a4);
         System.out.println(a5);
         System.out.println(a6);
-
+       */
         //assignment operations
         int b2 = 9;
         b2 += 2;
