@@ -37,22 +37,22 @@ public class Task1 {
         System.out.println(c);
         d = 17 % 3;
         System.out.println(d);
-        // ++ преф.
+        // ++a
         a = 5;
         b = ++a;
         System.out.println(a);
         System.out.println(b);
-        // ++ пост.
+        // a++
         a = 7;
         b = a++;
         System.out.println(a);
         System.out.println(b);
-        // -- преф.
+        // --a
         a = 17;
         b = --a;
         System.out.println(a);
         System.out.println(b);
-        // -- пост.
+        // a--
         a = 12;
         b = a--;
         System.out.println(a);
@@ -76,7 +76,7 @@ public class Task1 {
         a = 17;
         b = 34;
         boolean k2 = a < b;
-        boolean k3 = a >b;
+        boolean k3 = a > b;
         System.out.println(k2);
         System.out.println(k3);
         // <= >=
@@ -94,7 +94,7 @@ public class Task1 {
         System.out.println(a1);
         System.out.println(a2);
         boolean a3 = 15 < 58 && 15 > 58;
-        boolean a4 = 58 >15 && 15 < 58;
+        boolean a4 = 58 > 15 && 15 < 58;
         System.out.println(a3);
         System.out.println(a4);
         // операции пресваивания
