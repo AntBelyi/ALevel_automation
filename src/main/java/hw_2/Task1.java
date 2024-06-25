@@ -1,6 +1,6 @@
-package hw_2_tasks_from_metanit;
+package hw_2;
 
-public class App {
+public class Task1 {
     public static void main(String[] args) {
         // arithmetic operations
         int a = 7;
