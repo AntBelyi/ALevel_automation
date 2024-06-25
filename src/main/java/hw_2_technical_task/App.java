@@ -5,8 +5,7 @@ public class App {
         int x = 3;
         int y = 4;
 
-        System.out.println(x + y);
-        System.out.println(x + "" + y);
+        System.out.println((x + y) + " and " + x + y);
 
     }
 }
