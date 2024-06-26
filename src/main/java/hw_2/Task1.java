@@ -23,14 +23,14 @@ public class Task1 {
         d = a * b * 2;
         System.out.println(c);
         System.out.println(d);
-        // /
+        //  /
         a = 12;
         b = 3;
         c = a / b;
         System.out.println(c);
         double j= 20.5 / 4;
         System.out.println(j);
-        // %
+        //  %
         a = 45;
         b = 15;
         c = a % b;
