@@ -109,7 +109,7 @@ public class Task1 {
         a = 25;
         b = 10;
         System.out.println(b -= a);
-        // *= /=
+        // *=  /=
         a = 5;
         b = 3;
         System.out.println(b *= a);
@@ -117,7 +117,7 @@ public class Task1 {
         b = 5;
         c = a /= b;
         System.out.println(c);
-        // %
+        //  %
         a = 17;
         b = 5;
         a %= b;
