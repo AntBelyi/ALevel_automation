@@ -2,21 +2,24 @@ package hw_3;
 
 public class Task3 {
     public static void main(String[] args) {
-        // ДЗ Масиви та рядки
-        /*Створіть рядок "Hello world!"
-        - Виведіть перший символ
-        - Виведіть останній символ
-        - Створіть масив символів, покладіть туди усі символи слова world
-        - Вивести масив у консоль
-        - Вивести в консоль передостанній елемент масиву, не використовуючи прямий доступ за індексом (arr[3] – не згодиться)
+        // HW Arrays and Strings
+        /*Create the string "Hello world!"
+        - Print  the first character
+        - Print the last character
+        -  Create an array of characters, put all the characters of the word "world" into it
+        - Print the array to the console
+        - Print the second-to-last element of the array without using direct index access (arr[3] is not allowed)
         */
         String hello = "Hello World!";
         char first = hello.charAt(0);
         char last = hello.charAt(hello.length() - 1);
         System.out.println(first);
         System.out.println(last);
-        char[] world = {'w','o','r','l','d'};
-        System.out.println(world);
-        System.out.println(world[world.length-2]);
+        int start = 6;
+        int end = 11;
+        char[] dst = new char[end - start];
+        hello.getChars(start, end, dst, 0);
+        System.out.println(dst);
+        System.out.println(dst[dst.length -2]);
     }
 }

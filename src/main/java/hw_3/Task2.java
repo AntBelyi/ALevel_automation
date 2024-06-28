@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class Task2 {
     public static void main(String[] args) {
-        //ДЗ масиви
-        //Створіть масив із цілих чисел і помістіть відразу 10 значень. Пройдіться ними і змініть значення.
+        //HW Arrays
+        //Create an array of integers and immediately place 10 values in it. Iterate over them and change the values
         int[] array = new int[10];
         array[0] = 1;
         array[1] = 2;
@@ -18,10 +18,10 @@ public class Task2 {
         array[8] = 9;
         array[9] =10;
         System.out.println(Arrays.toString(array));
-        //Створіть масив із дробових чисел (5 елементів)
-        double[] array_1 = new double[5];
-        System.out.println(Arrays.toString(array_1));
-        //Створіть 3 змінних таких типів: byte, int, long. Створіть масив типу int. Спробуйте туди покласти змінні.
+        //Create an array of floating-point numbers (5 elements)
+        double[] numbers = new double[5];
+        System.out.println(Arrays.toString(numbers));
+        //Create 3 variables of the following types: byte, int, long. Create an array of type int. Try to put the variables into the array
         byte a = 43;
         int b = 13;
         long c = 123;
@@ -30,7 +30,7 @@ public class Task2 {
         array_2[1] = b;
         array_2[2] = (int) c;
         System.out.println(Arrays.toString(array_2));
-        //Створіть будь-який двовимірний масив, заповніть будь-якими даними та виведіть у консоль
+        //Create any two-dimensional array, fill it with any data, and print it to the console
         int[][] array_3 = {{1,2,3,4,5}, {2,3,4,5,6}};
             for (int[] value : array_3) {
                 System.out.println(Arrays.toString(value));
