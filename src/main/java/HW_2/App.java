@@ -1,11 +1,7 @@
-package HW_2.home_task_from_metanit;
+package HW_2;
 
 public class App {
     public static void main(String[] args) {
-        int x = 3;
-        int y = 4;
-        System.out.println(x + y);
-        System.out.println(" " + x + y);
     //arithmetic operations
         // +
         int a = 5;
@@ -23,18 +19,18 @@ public class App {
         double p=40/2.5; //16.0
         // remainder of two numbers
         int q = 32 % 5; // 2 (32 - 5 * 6 = 2)
-        // prefix increment (спочатку збільшує значення зиінної на 1, а потім присвоює значення)
+        // prefix increment (First increments the value of the variable by 1, and then assigns the value)
         int m = 3;
         int n = ++m;
         System.out.println(m); // 4
         System.out.println(n); // 4
-        //postfix increment (спочатку присвоює значення, а потім збільшує значення змінної на 1)
+        //postfix increment (First assigns the value, and then increments the value of the variable by 1)
         int e = 5;
         int h = e++;
         System.out.println(e); // 6
         System.out.println(h); // 5
-        /* prefix decrement (спочатку зменшує значення змінної на 1, а потім присвоює значення)
-        postfix decrement (спочатку присвоює значення, а потім зменшує значення змінної на 1
+        /* prefix decrement (First decrements the value of the variable by 1, and then assigns the value)
+        postfix decrement (First assigns the value, and then decrements the value of the variable by 1)
          */
         //arithmetic operator precedence
         int r = 9;
@@ -59,7 +55,7 @@ public class App {
         int a4 = 20;
         int b4 = 4;
         boolean c4 = a4 > b4; // true
-    // >= true, якщо перший операнд більше або дорівнює другому, інакше - false
+    // >= true, True if the first operand is greater than or equal to the second, otherwise false
         boolean as = 120 >= 10; // true
         boolean v = 10 >= 4; // true
         boolean d5 = 2 >= 20; // false
@@ -71,5 +67,9 @@ public class App {
         boolean app_2 = (4 > 6) & (7 < 9);
         System.out.println(app_1); //  true
         System.out.println(app_2); //  false
+        int x = 3;
+        int y = 4;
+        System.out.println(x + y);
+        System.out.println(" " + x + y);
     }
 }
