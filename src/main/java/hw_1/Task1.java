@@ -6,8 +6,6 @@ public class Task1 {
         int age = 25;
         float weight = 50.455f;
 
-        System.out.println(name);
-        System.out.println(age);
-        System.out.println(weight);
+        System.out.println("Name: " + name + ", Age: " + age + ", Weight: " + weight);
     }
 }
