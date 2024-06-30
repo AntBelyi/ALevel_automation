@@ -1,6 +1,6 @@
 package HW_2;
 
-public class App {
+public class Task1 {
     public static void main(String[] args) {
     //arithmetic operations
         // +
@@ -67,9 +67,6 @@ public class App {
         boolean app_2 = (4 > 6) & (7 < 9);
         System.out.println(app_1); //  true
         System.out.println(app_2); //  false
-        int x = 3;
-        int y = 4;
-        System.out.println(x + y);
-        System.out.println(" " + x + y);
+
     }
 }
