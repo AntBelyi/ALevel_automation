@@ -12,13 +12,13 @@ public class Task1 {
         double b = scanner.nextDouble();
         System.out.print("c: ");
         double c = scanner.nextDouble();
-        double D = b * b - 4 * a * c;
-        if (D > 0) {
+        double discriminator = b * b - 4 * a * c;
+        if (discriminator > 0) {
             double x1, x2;
-            x1 = (-b - Math.sqrt(D)) / (2 * a);
-            x2 = (-b + Math.sqrt(D)) / (2 * a);
+            x1 = (-b - Math.sqrt(discriminator)) / (2 * a);
+            x2 = (-b + Math.sqrt(discriminator)) / (2 * a);
             System.out.println("The roots of the equation are: x1 = " + x1 + ", x2 = " + x2);
-        } else if (D == 0) {
+        } else if (discriminator == 0) {
             double x;
             x = -b / (2 * a);
             System.out.println("The equation has a single root: x = " + x);
@@ -27,14 +27,3 @@ public class Task1 {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
