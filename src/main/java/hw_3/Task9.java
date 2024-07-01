@@ -7,13 +7,13 @@ public class Task9 {
         a++;
         b--;
 
-        System.out.println("a після постінкременту: " + a);
-        System.out.println("b після постдекременту: " + b);
+        System.out.println("a after postincrement: " + a);
+        System.out.println("b after postdecrement: " + b);
 
         int d = ++b;
 
-        System.out.println("b після преінкременту: " + b);
-        System.out.println("b після преінкременту: " + d);
+        System.out.println("b after preincrement: " + b);
+        System.out.println("b after preincrement: " + d);
 
     }
 }
