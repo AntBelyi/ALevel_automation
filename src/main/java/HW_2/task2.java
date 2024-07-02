@@ -5,8 +5,6 @@ public class task2 {
         int x = 3;
         int y = 4;
 
-        System.out.println(x + y);
-        System.out.print(x);
-        System.out.println(y);
+        System.out.println((x + y) + "," + x + y);
     }
 }
