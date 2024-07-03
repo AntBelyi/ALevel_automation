@@ -1,5 +1,7 @@
 package hw_3;
+
 import java.util.Arrays;
+
 public class Task2 {
     public static void main(String[] args) {
         //task1
@@ -17,7 +19,7 @@ public class Task2 {
         example[9] = 50;
         System.out.println(Arrays.toString(example));
         //task2
-        double[] array= new double[5];
+        double[] array = new double[5];
         System.out.println(Arrays.toString(array));
         //task3
         byte a = 7;
@@ -30,11 +32,12 @@ public class Task2 {
         System.out.println(Arrays.toString(values));
         //task4
         int[][] arrayTwins = new int[3][2];
-        System.out.println(Arrays.deepToString( arrayTwins));
         arrayTwins[0][1] = 17;
         arrayTwins[2][0] = 5;
         arrayTwins[1][1] = 24;
         arrayTwins[0][0] = 14;
+        arrayTwins[1][0] = 34;
+        arrayTwins[2][1] = 4;
         System.out.println(Arrays.deepToString(arrayTwins));
     }
 }
