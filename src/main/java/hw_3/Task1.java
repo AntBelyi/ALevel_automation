@@ -7,13 +7,14 @@ public class Task1 {
         //task1
         double[] array = {3.43, 12.1212, 12.22, 2.29};
         System.out.println(Arrays.toString(array));
-        System.out.print(array[0]);
-        for (int i = 1; i < array.length; i++) {
-            System.out.print(";" + array[i]);
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < array.length; i++) {
+            str.append(array[i]);
+            if (i < array.length - 1) {
+                str.append(";");
+                System.out.println(str.toString());
+            }
         }
-        System.out.println();
-
-
         //task2
         String sentence = "Мама мила раму";
         System.out.println(sentence);
@@ -23,8 +24,8 @@ public class Task1 {
         }
 
         //task3
-        String rescheduled = "Я хочу перенесення рядків";
-        System.out.println(rescheduled);
-        System.out.println(rescheduled.replace(" ", "\n"));
+        String textSentence = "Я хочу перенесення рядків";
+        System.out.println(textSentence);
+        System.out.println(textSentence.replace(" ", "\n"));
     }
 }
