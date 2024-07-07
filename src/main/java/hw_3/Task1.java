@@ -12,7 +12,7 @@ public class Task1 {
             str.append(array[i]);
             if (i < array.length - 1) {
                 str.append(";");
-                System.out.println(str.toString());
+                System.out.println(str);
             }
         }
         //task2
