@@ -12,9 +12,9 @@ public class Task1 {
             str.append(array[i]);
             if (i < array.length - 1) {
                 str.append(";");
-                System.out.println(str);
             }
         }
+        System.out.println(str);
         //task2
         String sentence = "Мама мила раму";
         System.out.println(sentence);
