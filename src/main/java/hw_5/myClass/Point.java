@@ -8,7 +8,8 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-    public String Info(){
+
+    public String info() {
         return "x = x" + x + "y = y";
     }
 
