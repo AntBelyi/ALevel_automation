@@ -1,5 +1,4 @@
 package hw_6;
-import hw_6.MyArray;
 
 public class Main {
     public static void main(String[] args) {
