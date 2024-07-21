@@ -6,10 +6,10 @@ public class Task2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter a string of integers separated by commas:");
+        System.out.println("Enter a string of integers separated by spaces:");
         String input = scanner.nextLine();
 
-        String[] numberStrings = input.split(",");
+        String[] numberStrings = input.split(" ");
         int[] numbers = new int[numberStrings.length];
 
         for (int i = 0; i < numberStrings.length; i++) {
@@ -24,8 +24,8 @@ public class Task2 {
             max = Math.max(max, number);
         }
 
-        System.out.println("Мінімальне число: " + min);
-        System.out.println("Максимальне число: " + max);
+        System.out.println("Minimum number: " + min);
+        System.out.println("Maximum number: " + max);
 
     }
 }
