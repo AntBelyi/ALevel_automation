@@ -2,9 +2,6 @@ package hw_10;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import static java.lang.Character.getName;
 
 public class Task3 {
     public static void main(String[] args) {
