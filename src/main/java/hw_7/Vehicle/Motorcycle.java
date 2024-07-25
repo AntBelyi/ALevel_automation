@@ -1,4 +1,4 @@
-package hw_7;
+package hw_7.Vehicle;
 
 public class Motorcycle extends Vehicle {
     private boolean hasSidecar;

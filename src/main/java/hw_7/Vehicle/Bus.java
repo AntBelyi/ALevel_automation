@@ -1,4 +1,4 @@
-package hw_7;
+package hw_7.Vehicle;
 
 public class Bus extends Vehicle {
     private int numberOfSeats;

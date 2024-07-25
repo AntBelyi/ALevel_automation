@@ -1,4 +1,4 @@
-package hw_7;
+package hw_7.Vehicle;
 
 public class Car extends Vehicle {
     private int numberOfDoors;

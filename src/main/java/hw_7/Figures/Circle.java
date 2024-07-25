@@ -1,4 +1,4 @@
-package hw_7;
+package hw_7.Figures;
 
 public class Circle {
     private static final double PI = 3.14;

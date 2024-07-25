@@ -1,4 +1,4 @@
-package hw_7;
+package hw_7.Vehicle;
 
 public class Main {
     public static void main(String[] args) {

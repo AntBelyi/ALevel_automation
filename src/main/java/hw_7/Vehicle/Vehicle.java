@@ -1,6 +1,6 @@
-package hw_7;
+package hw_7.Vehicle;
 
-public class Vehicle {
+public abstract class Vehicle {
     private String brand;
     private String model;
 

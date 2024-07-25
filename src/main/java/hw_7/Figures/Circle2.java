@@ -1,4 +1,4 @@
-package hw_7;
+package hw_7.Figures;
 
 public class Circle2 extends Figure {
     private double radius;
