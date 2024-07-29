@@ -2,7 +2,8 @@ package HW_7;
 
 public class Circle extends Figure {
     private double radius;
-    public static final double PI = 3.14;
+    final double PI = 3.14;
+
     public Circle(double radius){
         this.radius = radius;
     }
@@ -16,6 +17,7 @@ public class Circle extends Figure {
     public double getArea() {
         return PI * radius * radius;
     }
+
     @Override
     public String toString() {
         return "Circle " + super.toString();
