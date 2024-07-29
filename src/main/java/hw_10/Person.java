@@ -40,9 +40,6 @@ public class Person {
         return salary;
     }
 
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
 
     @Override
     public String toString() {
@@ -50,7 +47,6 @@ public class Person {
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", age=" + age +
-                ", salary=" + salary +
                 '}';
     }
 }
