@@ -12,10 +12,6 @@ public class Humidifier extends Climate {
         return water_quantity;
     }
 
-    public void setWater_quantity(int water_quantity) {
-        this.water_quantity = water_quantity;
-    }
-
     @Override
     public void cool_down() {
         System.out.println("Works as a cooler and humidifier for water evaporation");
