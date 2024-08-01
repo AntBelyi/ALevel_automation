@@ -91,6 +91,4 @@ public class Task2 {
             throw new RuntimeException(e);
         }
     }
-
-
 }
