@@ -2,6 +2,16 @@ package hw_13;
 
 public class CarDTO {
     private String model;
+    private int countOfWheels;
+    private int maxSpeed;
+    private int years;
+
+    public CarDTO(String model, int countOfWheels, int maxSpeed, int years) {
+        this.model = model;
+        this.countOfWheels = countOfWheels;
+        this.maxSpeed = maxSpeed;
+        this.years = years;
+    }
 
     public int getCountOfWheels() {
         return countOfWheels;
@@ -13,17 +23,6 @@ public class CarDTO {
         }
 
         this.countOfWheels = countOfWheels;
-    }
-
-    private int countOfWheels;
-    private int maxSpeed;
-    private int years;
-
-    public CarDTO(String model, int countOfWheels, int maxSpeed, int years) {
-        this.model = model;
-        this.countOfWheels = countOfWheels;
-        this.maxSpeed = maxSpeed;
-        this.years = years;
     }
 
     @Override
