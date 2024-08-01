@@ -1,0 +1,6 @@
+{
+  "model": "BMW",
+  "countOfWheels": 4,
+  "maxSpeed": 220,
+  "years": 9
+}
