@@ -8,10 +8,6 @@ public class Conditioner extends Climate {
         this.freonName = freonName;
     }
 
-    public String getFreonName() {
-        return freonName;
-    }
-
     @Override
     public void cool_down() {
         System.out.println("The conditioner can cool and heat the room");

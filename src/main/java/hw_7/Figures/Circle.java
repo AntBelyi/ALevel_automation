@@ -8,10 +8,6 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public double getRadius() {
-        return radius;
-    }
-
     @Override
     public double getPerimeter() {
         return 2 * PI * radius;
