@@ -11,11 +11,7 @@ public class Main {
         Lecture30.finishWork(myBrowser);
         Lecture30.finishWork(myFile);
 
-        @FunctionalInterface
-        interface SessionCloser {
-            void closeSession(List<CanBeClosed> entities);
-        }
-
+        // Використання функціонального інтерфейсу з окремого файлу
         SessionCloser closer = (entities) -> {
             for (CanBeClosed entity : entities) {
                 entity.close();
