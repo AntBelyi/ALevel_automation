@@ -33,17 +33,4 @@ public class Task4 {
         System.out.println(deque);
 
     }
-
-    static class Car {
-        private String brand;
-
-        public Car(String brand) {
-            this.brand = brand;
-        }
-
-        @Override
-        public String toString() {
-            return brand;
-        }
-    }
 }
