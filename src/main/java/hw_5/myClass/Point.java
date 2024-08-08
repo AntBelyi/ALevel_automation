@@ -9,6 +9,10 @@ public class Point {
         this.y = y;
     }
 
+    public String info() {
+        return "x = " + x + ", y = " + y;
+    }
+
     @Override
     public String toString() {
         return "Point{" +

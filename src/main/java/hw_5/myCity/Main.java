@@ -17,7 +17,8 @@ public class Main {
 
         for (int i = 0; i < points.length; i++) {
             if (points[i].x % 2 == 0 && points[i].y % 2 == 0) {
-                System.out.println(points[i]);
+                System.out.println(points[i].info());
+
             }
         }
     }
