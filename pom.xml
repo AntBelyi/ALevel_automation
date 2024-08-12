@@ -33,5 +33,11 @@
       <artifactId>selenide</artifactId>
       <version>7.4.1</version>
     </dependency>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.10.2</version>
+      <scope>java</scope>
+    </dependency>
   </dependencies>
 </project>
