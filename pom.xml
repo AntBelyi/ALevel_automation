@@ -28,5 +28,10 @@
       <artifactId>gson</artifactId>
       <version>2.11.0</version>
     </dependency>
+    <dependency>
+      <groupId>com.codeborne</groupId>
+      <artifactId>selenide</artifactId>
+      <version>7.4.1</version>
+    </dependency>
   </dependencies>
 </project>
