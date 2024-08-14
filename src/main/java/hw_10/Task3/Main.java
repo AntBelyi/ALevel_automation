@@ -17,8 +17,8 @@ public class Main {
         people.forEach(System.out::println);
 
         List<String> namesUnder70 = people.stream()
-                .filter(person -> person.age < 70)
-                .map(person -> person.name)
+                .filter(person -> person.getAge() < 70)
+                .map(Person::getName)
                 .collect(Collectors.toList());
 
         System.out.println("\nNames of people under 70:");
