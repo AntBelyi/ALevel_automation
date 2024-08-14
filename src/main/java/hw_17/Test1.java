@@ -1,4 +1,5 @@
 package hw_17;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,8 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
-import org.junit.Assert;
-
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class Test1 {
     public static void main(String[] args) {
@@ -23,10 +23,10 @@ public class Test1 {
         WebElement searchField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input#search-input")));
         searchField.sendKeys("lipstick");
 
-        WebElement searchActivateButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a.search-result__link[href='/ua/search/?q=lipstick']")));
+        WebElement searchActivateButton = driver.findElement(By.cssSelector("a.search-result__link[href='/ua/search/?q=lipstick']"));
         searchActivateButton.click();
 
-        WebElement resultsContainer = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href='/ua/search/?q=lipstick']")));
+        WebElement resultsContainer = driver.findElement(By.cssSelector("a[href='/ua/search/?q=lipstick']"));
         Assert.assertTrue("Results container should be displayed", resultsContainer.isDisplayed());
 
         driver.quit();

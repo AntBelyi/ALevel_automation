@@ -20,8 +20,6 @@ public class Test3 {
 
         WebElement videoButton = driver.findElement(By.cssSelector("a.bc-1y2bmtx-item"));
         videoButton.click();
-
-        String currentUrl = driver.getCurrentUrl();
         Assert.assertTrue(videoButton.isDisplayed());
 
         driver.quit();

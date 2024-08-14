@@ -17,7 +17,7 @@ public class Test4 {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-        WebElement hairButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a.menu-list__link[href='/ua/categorys/20272/']\n")));
+        WebElement hairButton = driver.findElement(By.cssSelector("a.menu-list__link[href='/ua/categorys/20272/']"));
         hairButton.click();
 
         WebElement hairSection = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h1.page-header_category ")));
