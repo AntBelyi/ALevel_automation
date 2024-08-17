@@ -1,5 +1,6 @@
 package hw_16;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import dev.failsafe.internal.util.Assert;
 
@@ -11,14 +12,12 @@ public class Test2 {
         final String HELP_PAGE_TEXT = "Найактуальніше";
 
         open("https://rozetka.com.ua");
-        sleep(2000);
 
         SelenideElement helpLink = $(".main-links__help[href*='help.rozetka.com']");
-        helpLink.click();
-        sleep(2000);
+        helpLink.shouldBe(Condition.visible).click();
 
         SelenideElement titleText = $(".info-title");
-        String actualTitleText = titleText.getText();
+        String actualTitleText = titleText.shouldBe(Condition.visible).getText();
         System.out.println(actualTitleText);
 
         Assert.isTrue(titleText.getText().contains(HELP_PAGE_TEXT), "Help title text is not found");

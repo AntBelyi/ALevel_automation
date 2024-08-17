@@ -13,7 +13,7 @@ public class Test3 {
         open("https://rozetka.com.ua");
 
         SelenideElement cartItem = $(".header-actions .header-cart__button");
-        cartItem.click();
+        cartItem.shouldBe(Condition.visible).click();
 
         SelenideElement elementEmptyCart = $(".cart-dummy__heading").shouldBe(Condition.visible);
         SelenideElement cartImage = $("img.cart-dummy__illustration").shouldBe(Condition.visible);
