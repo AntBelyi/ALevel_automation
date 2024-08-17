@@ -14,34 +14,26 @@ import java.time.Duration;
 public class Test3 {
     public static void main(String[] args) {
 
-        WebDriver driver = null;
+        WebDriver driver = new ChromeDriver();
+
+        driver.manage().window().maximize();
+        WebDriverWait waiter = new WebDriverWait(driver, Duration.ofMillis(3000));
 
         final String EMPTY_CART_TEXT = "Кошик порожній";
 
-        try {
-            driver = new ChromeDriver();
-            WebDriverWait waiter = new WebDriverWait(driver, Duration.ofMillis(3000));
-            driver.get("https://rozetka.com.ua");
+        driver.get("https://rozetka.com.ua");
 
-            WebElement cartItem = driver.findElement(By.cssSelector(".header-actions .header-cart__button"));
+        WebElement cartItem = driver.findElement(By.cssSelector(".header-actions .header-cart__button"));
+        cartItem.click();
 
-            cartItem.click();
+        WebElement elementEmptyCart = waiter.until(
+                ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".cart-dummy__heading")));
 
-            WebElement elementEmptyCart = waiter.until(
-                    ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".cart-dummy__heading"))
-            );
+        WebElement cartImage = driver.findElement(By.cssSelector("img[class=cart-dummy__illustration]"));
 
-            WebElement cartImage = driver.findElement(By.cssSelector("img[class=cart-dummy__illustration]"));
+        Assert.isTrue(elementEmptyCart.getText().contains(EMPTY_CART_TEXT) && cartImage.isDisplayed(), "The cart is not empty");
+        System.out.println("Test3 is successful");
 
-            Boolean checkTest = ((cartImage != null) && cartImage.isDisplayed());
-
-            Assert.isTrue(elementEmptyCart.getText().contains(EMPTY_CART_TEXT) && checkTest, "The cart is broken");
-            System.out.println("Test3 is successful");
-            
-        }
-        finally {
-            if (driver != null)
-                driver.quit();
-        }
+        driver.quit();
     }
 }

@@ -5,8 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
@@ -14,37 +12,29 @@ public class Test1 {
     public static void main(String[] args) {
 
         WebDriver driver = new ChromeDriver();
-        try {
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
-            final String ERROR_MESSAHE = "Невірний формат номеру посилки. Перевірте вказані символи, а також довжину номеру, яка має бути не більше 13 символів.";
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
-            driver.get("https://rozetka.com.ua");
+        final String SEARCH_ERROR_MESSAGE = "Невірний формат номеру посилки. Перевірте вказані символи, а також довжину номеру, яка має бути не більше 13 символів.";
 
-            WebElement trackPackageLink = driver.findElement(By.cssSelector("a[href*='tracking/']"));
-            trackPackageLink.click();
+        driver.get("https://rozetka.com.ua");
 
-            WebElement trackPackageInput = driver.findElement(By.id("searchText"));
-            WebElement trackPackageButton = driver.findElement(By.cssSelector("button[class='button button--medium button--green']"));
-            String errorMessage = "";
+        WebElement trackPackageLink = driver.findElement(By.cssSelector("a[href*='tracking/']"));
+        trackPackageLink.click();
 
-            if (trackPackageInput != null && trackPackageButton != null && trackPackageInput.isDisplayed()) {
+        WebElement trackPackageInput = driver.findElement(By.id("searchText"));
+        WebElement trackPackageButton = driver.findElement(By.cssSelector("button[class='button button--medium button--green']"));
 
-                trackPackageInput.sendKeys("20450938174406");
-                trackPackageButton.click();
+        trackPackageInput.sendKeys("20450938174406");
+        trackPackageButton.click();
 
-                WebElement errorMessagePar = driver.findElement(By.cssSelector("[class*='validation-message']"));
+        WebElement errorValidationMessage = driver.findElement(By.cssSelector("[class*='validation-message']"));
 
-                if (errorMessagePar != null) {
-                    errorMessage = errorMessagePar.getText();
-                }
-            }
+        Assert.isTrue(errorValidationMessage.getText().equals(SEARCH_ERROR_MESSAGE), "The 'Wrong format package tracking number' is not displayed");
+        System.out.println("Test1 is successful");
 
-            Assert.isTrue(errorMessage.equals(ERROR_MESSAHE), "The 'Wrong format package tracking number' is not displayed", null);
-            System.out.println("Test1 is successful");
+        driver.quit();
 
-        } finally {
-            driver.quit();
-        }
     }
 }

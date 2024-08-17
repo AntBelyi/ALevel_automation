@@ -18,25 +18,25 @@ public class Test4 {
 
         driver.manage().window().maximize();
         WebDriverWait waiter = new WebDriverWait(driver, Duration.ofMillis(3000));
+
         driver.get("https://rozetka.com.ua");
 
         WebElement searchInput = driver.findElement(By.xpath("//input[contains(@class, 'search-form__input')]"));
 
         searchInput.sendKeys("4820227283217", Keys.ENTER);
 
-        WebElement elementProduct = waiter.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[class='product-button__buy-group']")));
-        elementProduct.click();
+        WebElement addToBasketButton = waiter.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[class='product-button__buy-group']")));
+        addToBasketButton.click();
 
-        WebElement elementCartPlus = waiter.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-testid='cart-counter-increment-button']")));
-        elementCartPlus.click();
+        WebElement increaseProductQuantityButton = waiter.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-testid='cart-counter-increment-button']")));
+        increaseProductQuantityButton.click();
 
         String valueCount = driver.findElement(By.cssSelector("[data-testid='cart-counter-input']")).getAttribute("value");
 
         System.out.println("Value: " + valueCount);
-
         Assert.isTrue(valueCount.contains("2"), "Count of products is not correct");
-
         System.out.println("Test4 is successful");
+
         driver.quit();
 
     }
