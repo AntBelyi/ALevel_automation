@@ -14,6 +14,7 @@ public class Test1 {
         final String ERROR_MESSAGE = "Невірний формат номеру посилки. Перевірте вказані символи, а також довжину номеру, яка має бути не більше 13 символів.";
 
         open("https://rozetka.com.ua");
+        webdriver().driver().getWebDriver().manage().window().maximize();
 
         SelenideElement trackPackageLink = $("a[href*='tracking/']");
         trackPackageLink.shouldBe(visible).click();

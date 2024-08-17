@@ -10,7 +10,6 @@ public class Test4 {
     public static void main(String[] args) {
 
         open("https://rozetka.com.ua");
-
         webdriver().driver().getWebDriver().manage().window().maximize();
 
         SelenideElement searchInput = $x("//input[contains(@class, 'search-form__input')]");

@@ -12,6 +12,7 @@ public class Test2 {
         final String HELP_PAGE_TEXT = "Найактуальніше";
 
         open("https://rozetka.com.ua");
+        webdriver().driver().getWebDriver().manage().window().maximize();
 
         SelenideElement helpLink = $(".main-links__help[href*='help.rozetka.com']");
         helpLink.shouldBe(Condition.visible).click();
