@@ -1,18 +1,18 @@
 package hw_16;
 
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.Condition;
 import dev.failsafe.internal.util.Assert;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class Test3 {
     public static void main(String[] args) {
         final String EMPTY_CART_TEXT = "Кошик порожній";
 
         open("https://rozetka.com.ua");
-        webdriver().driver().getWebDriver().manage().window().maximize();
+        getWebDriver().manage().window().maximize();
 
         SelenideElement cartItem = $(".header-actions .header-cart__button");
         cartItem.shouldBe(visible).click();

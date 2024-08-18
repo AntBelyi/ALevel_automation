@@ -1,11 +1,11 @@
 package hw_16;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import dev.failsafe.internal.util.Assert;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class Test1 {
 
@@ -14,7 +14,7 @@ public class Test1 {
         final String ERROR_MESSAGE = "Невірний формат номеру посилки. Перевірте вказані символи, а також довжину номеру, яка має бути не більше 13 символів.";
 
         open("https://rozetka.com.ua");
-        webdriver().driver().getWebDriver().manage().window().maximize();
+        getWebDriver().manage().window().maximize();
 
         SelenideElement trackPackageLink = $("a[href*='tracking/']");
         trackPackageLink.shouldBe(visible).click();

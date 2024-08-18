@@ -5,6 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import dev.failsafe.internal.util.Assert;
 
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class Test2 {
     public static void main(String[] args) {
@@ -12,7 +13,7 @@ public class Test2 {
         final String HELP_PAGE_TEXT = "Найактуальніше";
 
         open("https://rozetka.com.ua");
-        webdriver().driver().getWebDriver().manage().window().maximize();
+        getWebDriver().manage().window().maximize();
 
         SelenideElement helpLink = $(".main-links__help[href*='help.rozetka.com']");
         helpLink.shouldBe(Condition.visible).click();
