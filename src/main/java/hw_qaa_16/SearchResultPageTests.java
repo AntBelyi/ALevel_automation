@@ -1,5 +1,6 @@
 package hw_qaa_16;
 
+import hw_qaa_16.data_provider.SearchWordsData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -10,26 +11,24 @@ import java.util.List;
 
 public class SearchResultPageTests extends BaseTest {
 
-    @Test
-    public void verifyPositiveSearchInput() {
+    @Test(dataProvider = "getSearchWords", dataProviderClass = SearchWordsData.class)
+    public void verifyPositiveSearchInput(String wordToSearch, String wordToVerify) {
 
-        final String SEARCH_PRODUCT_TEXT = "порцеляна";
-        final String SEARCH_PRODUCT_TEXT_ADD1 = "порцеляні";
-        final String SEARCH_PRODUCT_TEXT_ADD2 = "порцеляни";
-        final String SEARCH_PRODUCT_TEXT_ADD3 = "посуд";
+        final String SEARCH_PRODUCT_TEXT_ADD1 = "посуд";
+        final String SEARCH_PRODUCT_TEXT_ADD2 = "статуетка";
 
         WebElement searchInput = getDriver().findElement(By.id("search"));
-        searchInput.sendKeys(SEARCH_PRODUCT_TEXT, Keys.ENTER);
+        searchInput.sendKeys(wordToSearch, Keys.ENTER);
 
         WebElement searchResultText = getDriver().findElement(By.cssSelector("[data-testid='total-count']"));
 
         List<WebElement> searchResult = getDriver().findElements(By.cssSelector("[class='css-1wxaaza']"));
 
         for (WebElement element : searchResult) {
-            Assert.assertTrue(element.getText().toLowerCase().contains(SEARCH_PRODUCT_TEXT) ||
+            //System.out.println(element.getText());
+            Assert.assertTrue(element.getText().toLowerCase().contains(wordToVerify) ||
                     element.getText().toLowerCase().contains(SEARCH_PRODUCT_TEXT_ADD1) ||
-                    element.getText().toLowerCase().contains(SEARCH_PRODUCT_TEXT_ADD2) ||
-                    element.getText().toLowerCase().contains(SEARCH_PRODUCT_TEXT_ADD3));
+                    element.getText().toLowerCase().contains(SEARCH_PRODUCT_TEXT_ADD2));
         }
 
         Assert.assertTrue(searchResultText.isDisplayed());
@@ -37,7 +36,7 @@ public class SearchResultPageTests extends BaseTest {
     }
 
     @Test
-    public void verifyNegativeSearchInput() {
+    public void verifyNotPresentSearchInput() {
 
         final String SEARCH_PRODUCT_TEXT = "nnnnnnn";
 
@@ -49,5 +48,22 @@ public class SearchResultPageTests extends BaseTest {
         Assert.assertTrue(searchResultText.getText().contains(" 0 "));
 
     }
+
+    @Test
+    public void verifyEmptySearchInput() {
+
+        final String SEARCH_PRODUCT_TEXT = " ";
+
+        WebElement searchInput = getDriver().findElement(By.id("search"));
+        searchInput.sendKeys(SEARCH_PRODUCT_TEXT, Keys.ENTER);
+
+        WebElement searchResultText = getDriver().findElement(By.cssSelector("[data-testid='total-count']"));
+
+        System.out.println(searchResultText.getText());
+
+        Assert.assertTrue(searchResultText.getText().contains(" 0 "));
+
+    }
+
 }
 

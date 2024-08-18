@@ -3,7 +3,6 @@ package hw_qaa_16;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,11 +11,10 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class HomePageTests extends BaseTest {
 
-    @Test
+    @Test(priority = 1)
     public void verifyProductCategoryShowing() {
 
         final Wait<WebDriver> wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5)).withMessage("Element was not found");
@@ -25,6 +23,8 @@ public class HomePageTests extends BaseTest {
 
         WebElement gardenItem = getDriver().findElement(By.cssSelector("[class='css-cbwxzx']"));
         gardenItem.click();
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[href*='posuda-kuhonnaya-utvar']")));
 
         WebElement gardenSubItem = getDriver().findElement(By.cssSelector("[href*='posuda-kuhonnaya-utvar']"));
         gardenSubItem.click();
@@ -41,7 +41,7 @@ public class HomePageTests extends BaseTest {
         Assert.assertTrue(searchResult.size() > 0);
     }
 
-    @Test
+    @Test(priority = 2)
     public void verifyLanguageChange() {
 
         String whiteColor = "rgba(255, 255, 255, 1)";
