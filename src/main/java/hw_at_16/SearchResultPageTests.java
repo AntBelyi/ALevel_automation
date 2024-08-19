@@ -1,6 +1,6 @@
-package hw_qaa_16;
+package hw_at_16;
 
-import hw_qaa_16.data_provider.SearchWordsData;
+import hw_at_16.data_provider.SearchWordsData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;

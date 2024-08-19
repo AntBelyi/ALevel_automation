@@ -1,6 +1,6 @@
-package hw_qaa_16;
+package hw_at_16;
 
-import hw_qaa_16.listeners.CustomListener;
+import hw_at_16.listeners.CustomListener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;

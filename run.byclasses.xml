@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Positive/Nagative Tests" verbose="1">
+    <test name="Positive Tests">
+        <classes>
+            <class name = "hw_at_16.HomePageTests" />
+            <class name = "hw_at_16.SearchResultPageTests" >
+                <methods>
+                    <include name = "verifyPositiveSearchInput"></include>
+                </methods>
+            </class>>
+        </classes>
+    </test>
+    <test name="Negative Tests">
+        <classes>
+            <class name = "hw_at_16.SearchResultPageTests" />
+            <class name = "hw_at_16.SearchResultPageTests" >
+                <methods>
+                    <exclude name = "verifyPositiveSearchInput"></exclude>
+                </methods>
+            </class>>
+        </classes>
+    </test>
+</suite>
