@@ -1,5 +1,6 @@
 package page_objects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,6 +18,7 @@ public class ProductDetailsPage {
 
     private static final By PRODUCT_NAME = By.cssSelector("h1.title__main");
 
+    @Step("User gets product name from PDP")
     public String getProductName() {
         waitForElement(PRODUCT_NAME);
         return driver.findElement(PRODUCT_NAME).getText();

@@ -1,5 +1,6 @@
 package page_objects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,20 +21,24 @@ public class SearchResultPage {
     private static final By SEARCH_RESULT_PAGE_TITLE = By.cssSelector("div.search__title");
     private static final By PRODUCT_ELEMENTS = By.cssSelector("div.list-item");
 
+    @Step("User gets search result page title")
     public String getSearchResultPageTitle() {
         waitForElement(SEARCH_RESULT_PAGE_TITLE);
         return driver.findElement(SEARCH_RESULT_PAGE_TITLE).getText();
     }
 
+    @Step("User remembers product name of <{0}> product")
     public String getProductName(int productIndex) {
         waitForProductsAppear(PRODUCT_ELEMENTS);
         List<WebElement> productElements = driver.findElements(PRODUCT_ELEMENTS);
         return productElements.get(productIndex - 1).findElement(By.cssSelector("[class='list-item__title-container m_b-5']")).getText();
     }
 
+    @Step("User navigates to product PDP of <{0}> product")
     public void navigateToProductPdp(int productIndex) {
         waitForProductsAppear(PRODUCT_ELEMENTS);
         List<WebElement> productElements = driver.findElements(PRODUCT_ELEMENTS);
+        System.out.println(5 / 0);
         productElements.get(productIndex - 1).findElement(By.cssSelector(".list-item__photo")).click();
     }
 

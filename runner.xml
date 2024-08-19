@@ -3,7 +3,7 @@
 <suite name="Tests from package" parallel="tests" thread-count="2">
     <test name="Tests from package">
         <packages>
-            <package name="search_tests"/>
+            <package name="practise"/>
         </packages>
     </test>
 </suite>

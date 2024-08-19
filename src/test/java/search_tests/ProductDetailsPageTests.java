@@ -1,5 +1,9 @@
 package search_tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import page_objects.HomePage;
@@ -9,6 +13,9 @@ import page_objects.SearchResultPage;
 public class ProductDetailsPageTests extends BaseTest {
 
     @Test()
+    @Severity(SeverityLevel.TRIVIAL)
+    @Feature("Product details page feature")
+    @Description("Verify that product details page title is correct")
     public void verifyProductDetailsPageTitleIsCorrect() {
         String wordToSearch = "iPhone";
         int indexProductToNavigate = 2;
@@ -25,7 +32,7 @@ public class ProductDetailsPageTests extends BaseTest {
 
         String actualProductName = productDetailsPage.getProductName();
 
-        Assert.assertTrue(actualProductName.contains(wordToSearch));
+        Assert.assertTrue(actualProductName.contains(navigatedProductName));
     }
 
 }
