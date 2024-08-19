@@ -4,8 +4,8 @@
 <suite name="Positive/Nagative Tests" verbose="1">
     <test name="Positive Tests">
         <classes>
-            <class name = "hw_at_16.HomePageTests" />
-            <class name = "hw_at_16.SearchResultPageTests" >
+            <class name = "hw_at_17.HomePageTests" />
+            <class name = "hw_at_17.SearchResultPageTests" >
                 <methods>
                     <include name = "verifyPositiveSearchInput"/>
                 </methods>
@@ -14,8 +14,8 @@
     </test>
     <test name="Negative Tests">
         <classes>
-            <class name = "hw_at_16.SearchResultPageTests" />
-            <class name = "hw_at_16.SearchResultPageTests" >
+            <class name = "hw_at_17.SearchResultPageTests" />
+            <class name = "hw_at_17.SearchResultPageTests" >
                 <methods>
                     <exclude name = "verifyPositiveSearchInput"/>
                 </methods>
