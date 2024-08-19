@@ -6,7 +6,7 @@ public class ThirdClassTest {
 
     @Test
     public void thirdClassTest() {
-        System.out.println("Hello from third class test");
+        System.out.println("Hello  from third class test");
     }
 
 }
