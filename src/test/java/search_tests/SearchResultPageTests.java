@@ -1,6 +1,5 @@
 package search_tests;
 
-import io.qameta.allure.Feature;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import page_objects.HomePage;
@@ -9,7 +8,6 @@ import page_objects.SearchResultPage;
 public class SearchResultPageTests extends BaseTest {
 
     @Test
-    @Feature("Search result page")
     public void verifySearchResultPageTitleIsCorrect() {
         String wordToSearch = "game";
 
