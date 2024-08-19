@@ -12,6 +12,9 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.List;
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
 public class HomePageTests extends BaseTest {
 
     @Test(priority = 1)
@@ -32,13 +35,15 @@ public class HomePageTests extends BaseTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[class='css-1wxaaza']")));
         WebElement searchResultText = getDriver().findElement(By.cssSelector("[data-testid='total-count']"));
 
+        assertTrue(searchResultText.isDisplayed());
+
         List<WebElement> searchResult = getDriver().findElements(By.cssSelector("[class='css-1wxaaza']"));
 
         for (WebElement element : searchResult) {
             Assert.assertNotNull(element);
         }
 
-        Assert.assertTrue(searchResult.size() > 0);
+        assertFalse(searchResult.isEmpty());
     }
 
     @Test(priority = 2)
@@ -52,7 +57,7 @@ public class HomePageTests extends BaseTest {
         WebElement ukrLanguageItem = getDriver().findElement(By.linkText("Укр"));
         String itemColor = ukrLanguageItem.getCssValue("color");
 
-        Assert.assertTrue(itemColor.contains(whiteColor));
+        assertTrue(itemColor.contains(whiteColor));
     }
 
 }
