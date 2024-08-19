@@ -7,9 +7,9 @@
             <class name = "hw_at_16.HomePageTests" />
             <class name = "hw_at_16.SearchResultPageTests" >
                 <methods>
-                    <include name = "verifyPositiveSearchInput"></include>
+                    <include name = "verifyPositiveSearchInput"/>
                 </methods>
-            </class>>
+            </class>
         </classes>
     </test>
     <test name="Negative Tests">
@@ -17,9 +17,9 @@
             <class name = "hw_at_16.SearchResultPageTests" />
             <class name = "hw_at_16.SearchResultPageTests" >
                 <methods>
-                    <exclude name = "verifyPositiveSearchInput"></exclude>
+                    <exclude name = "verifyPositiveSearchInput"/>
                 </methods>
-            </class>>
+            </class>
         </classes>
     </test>
 </suite>
