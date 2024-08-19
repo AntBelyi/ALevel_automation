@@ -32,7 +32,7 @@ public class ProductDetailsPageTests extends BaseTest {
 
         String actualProductName = productDetailsPage.getProductName();
 
-        Assert.assertTrue(actualProductName.contains("navigatedProductName"));
+        Assert.assertTrue(actualProductName.contains(wordToSearch));
     }
 
 }
