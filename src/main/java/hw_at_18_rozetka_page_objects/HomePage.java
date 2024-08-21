@@ -13,6 +13,7 @@ public class HomePage extends BasePage{
     private static final By SEARCH_BUTTON = By.cssSelector("button[class*='search-form__submit']");
     private static final By TRACK_PACKAGE = By.cssSelector("a[href*='tracking/']");
     private static final By HELP_CENTER = By.cssSelector(".main-links__help[href*='help.rozetka.com']");
+    private static final By CART = By.cssSelector(".header-actions .header-cart__button");
 
     public void typeSearchInput(String textToFind){
         waitForElement(SEARCH_INPUT);
@@ -32,4 +33,10 @@ public class HomePage extends BasePage{
         waitForElement(HELP_CENTER);
         getDriver().findElement(HELP_CENTER).click();
     }
+
+    public void clickCartIcon(){
+        waitForElement(CART);
+        getDriver().findElement(CART).click();
+    }
+
 }
