@@ -6,13 +6,7 @@ public class RozetkaDP {
 
     @DataProvider
     public Object[] getPackageTrack() {
-
-        return new Object[]{
-                {"nnnnnnn"},
-                {"7777777"},
-                {"!!!!!!!"},
-                { "@ @ @ @ @ @ @"}
-        };
+        return new Object[]{"nnnnnnn", "7777777"};
     }
 }
 

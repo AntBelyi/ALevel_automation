@@ -21,7 +21,7 @@ public class SearchResultPage extends BasePage{
     }
 
     public String getProductName(int productIndex){
-        waitFo60rProductAppear(PRODUCT_ITEMS);
+        waitFor60ProductAppear(PRODUCT_ITEMS);
         List<WebElement> productElement = getDriver().findElements(PRODUCT_ITEMS);
         return productElement.get(productIndex-1).getText();
     }
