@@ -38,5 +38,4 @@ public class HomePage extends BasePage{
         waitForElement(CART);
         getDriver().findElement(CART).click();
     }
-
 }

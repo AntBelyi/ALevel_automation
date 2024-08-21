@@ -23,7 +23,7 @@ public class ProductPageTests extends BaseTest{
 
         ProductDetailPage productDetailPage = new ProductDetailPage(getDriver());
 
-        Assert.assertEquals(productName, productDetailPage.GetPageTitle());
+        Assert.assertEquals(productName, productDetailPage.getPageTitle());
     }
 
 }
