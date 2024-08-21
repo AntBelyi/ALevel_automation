@@ -15,7 +15,6 @@ public class BasePage {
     protected WebDriver getDriver() {
         return driver;
     }
-
     protected WebDriverWait getWait() {
         return wait;
     }
