@@ -3,12 +3,10 @@ import PageObjects.SearchResultPage;
 import junit.framework.Assert;
 import org.testng.annotations.Test;
 
-import static java.lang.Thread.sleep;
-
 @Test
 public class SearchResultTests extends BaseTest {
 
-    public void verifySearchResultPageTitle() throws InterruptedException {
+    public void verifySearchResultPageTitle() {
 
         String wordToSearch = "iPhone";
 

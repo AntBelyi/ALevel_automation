@@ -4,8 +4,6 @@ import PageObjects.SearchResultPage;
 import junit.framework.Assert;
 import org.testng.annotations.Test;
 
-import static java.lang.Thread.sleep;
-
 public class ProductPageTests extends BaseTest{
 
     @Test

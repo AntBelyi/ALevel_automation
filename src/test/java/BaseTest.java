@@ -5,9 +5,9 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 
-    WebDriver driver;
+    private WebDriver driver;
 
-    public WebDriver getDriver() {
+    protected WebDriver getDriver() {
         return driver;
     }
 
