@@ -19,6 +19,7 @@ public class PackageTrackPage extends BasePage {
     }
 
     public void clickPackageTrackButton() {
+        waitForElement(PACKAGE_TRACK_CLICK);
         getDriver().findElement(PACKAGE_TRACK_CLICK).click();
     }
 

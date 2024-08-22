@@ -1,8 +1,8 @@
 import data_provider.RozetkaDP;
 import hw_at_18_rozetka_page_objects.HomePage;
 import hw_at_18_rozetka_page_objects.PackageTrackPage;
-import junit.framework.Assert;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 
 public class PackageTrackTests extends BaseTest
 {

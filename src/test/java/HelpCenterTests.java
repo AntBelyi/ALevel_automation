@@ -1,8 +1,7 @@
-import hw_at_18_rozetka_page_objects.BasePage;
+
 import hw_at_18_rozetka_page_objects.HelpCenterPage;
 import hw_at_18_rozetka_page_objects.HomePage;
-import hw_at_18_rozetka_page_objects.SearchResultPage;
-import junit.framework.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class HelpCenterTests extends BaseTest {

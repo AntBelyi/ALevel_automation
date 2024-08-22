@@ -1,8 +1,6 @@
 import hw_at_18_rozetka_page_objects.*;
-import junit.framework.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import static java.lang.Thread.sleep;
 
 public class CartTests extends BaseTest {
 
@@ -12,7 +10,6 @@ public class CartTests extends BaseTest {
         final String EMPTY_CART_TEXT = "Кошик порожній";
 
         HomePage homePage = new HomePage(getDriver());
-
         homePage.clickCartIcon();
 
         CartPage cartPage = new CartPage(getDriver());
@@ -22,7 +19,7 @@ public class CartTests extends BaseTest {
     }
 
     @Test
-    public void verifyProductToCar() throws InterruptedException {
+    public void verifyProductToCar() {
         String wordToSearch = "iPhone";
         int navigateToProduct = 4;
 
@@ -34,9 +31,7 @@ public class CartTests extends BaseTest {
         SearchResultPage searchPage = new SearchResultPage(getDriver());
 
         String productName = searchPage.getProductName(navigateToProduct);
-
         searchPage.addToCart(navigateToProduct);
-
         searchPage.clickCartIcon();
 
         CartPage cartPage = new CartPage(getDriver());
@@ -50,7 +45,6 @@ public class CartTests extends BaseTest {
         int navigateToProduct = 4;
 
         HomePage homePage = new HomePage(getDriver());
-
         homePage.typeSearchInput(wordToSearch);
         homePage.clickSearchButton();
 

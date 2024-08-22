@@ -3,9 +3,9 @@ package hw_at_18_rozetka_page_objects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
-    public HomePage(WebDriver driver){
+    public HomePage(WebDriver driver) {
         super(driver);
     }
 
@@ -15,26 +15,27 @@ public class HomePage extends BasePage{
     private static final By HELP_CENTER = By.cssSelector(".main-links__help[href*='help.rozetka.com']");
     private static final By CART = By.cssSelector(".header-actions .header-cart__button");
 
-    public void typeSearchInput(String textToFind){
+    public void typeSearchInput(String textToFind) {
         waitForElement(SEARCH_INPUT);
         getDriver().findElement(SEARCH_INPUT).sendKeys(textToFind);
     }
 
-    public void clickSearchButton(){
+    public void clickSearchButton() {
+        waitForElement(SEARCH_BUTTON);
         getDriver().findElement(SEARCH_BUTTON).click();
     }
 
-    public void clickPackageTrackLink(){
+    public void clickPackageTrackLink() {
         waitForElement(TRACK_PACKAGE);
         getDriver().findElement(TRACK_PACKAGE).click();
     }
 
-    public void clickHelpCenterLink(){
+    public void clickHelpCenterLink() {
         waitForElement(HELP_CENTER);
         getDriver().findElement(HELP_CENTER).click();
     }
 
-    public void clickCartIcon(){
+    public void clickCartIcon() {
         waitForElement(CART);
         getDriver().findElement(CART).click();
     }

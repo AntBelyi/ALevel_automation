@@ -12,14 +12,14 @@ public class BaseTest {
     }
 
     @BeforeMethod
-    public void driverInitialization(){
+    public void driverInitialization() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://rozetka.com.ua/");
     }
 
     @AfterMethod
-    public void driverClose(){
+    public void driverClose() {
         driver.quit();
     }
 }

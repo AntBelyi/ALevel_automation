@@ -15,20 +15,17 @@ public class BasePage {
     protected WebDriver getDriver() {
         return driver;
     }
-    protected WebDriverWait getWait() {
-        return wait;
-    }
 
     public BasePage(WebDriver driver){
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(50));
     }
 
     protected void waitForElement(By elementToWait){
-        getWait().until(ExpectedConditions.visibilityOfElementLocated(elementToWait));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(elementToWait));
     }
 
     protected void waitFor60ProductAppear(By elementToWait){
-        getWait().until(ExpectedConditions.numberOfElementsToBeMoreThan(elementToWait, 59));
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(elementToWait, 59));
     }
 }

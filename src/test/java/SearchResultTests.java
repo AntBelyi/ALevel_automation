@@ -1,6 +1,6 @@
 import hw_at_18_rozetka_page_objects.HomePage;
 import hw_at_18_rozetka_page_objects.SearchResultPage;
-import junit.framework.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 @Test
