@@ -25,5 +25,4 @@ public class ProductPageTests extends BaseTest{
 
         Assert.assertEquals(productName, productDetailPage.getPageTitle());
     }
-
 }

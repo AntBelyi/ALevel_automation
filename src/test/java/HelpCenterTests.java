@@ -20,5 +20,4 @@ public class HelpCenterTests extends BaseTest {
         Assert.assertEquals(HELP_PAGE_TEXT, helpCenterPage.getSearchResultPageTitle());
 
     }
-
 }
