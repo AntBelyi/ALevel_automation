@@ -13,9 +13,9 @@ import java.time.Duration;
 
 public class task2 {
     public static void main(String[] args) {
+
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
         driver.manage().window().maximize();
         driver.get("https://rozetka.com.ua/ua/");
 
