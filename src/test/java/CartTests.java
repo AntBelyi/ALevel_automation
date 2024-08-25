@@ -1,4 +1,4 @@
-import hw_at_18_rozetka_page_objects.*;
+import rozetka_page_objects.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

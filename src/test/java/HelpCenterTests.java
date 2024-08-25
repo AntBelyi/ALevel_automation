@@ -1,6 +1,6 @@
 
-import hw_at_18_rozetka_page_objects.HelpCenterPage;
-import hw_at_18_rozetka_page_objects.HomePage;
+import rozetka_page_objects.HelpCenterPage;
+import rozetka_page_objects.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
