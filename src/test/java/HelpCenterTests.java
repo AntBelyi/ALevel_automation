@@ -1,6 +1,6 @@
 
-import rozetka_page_objects.HelpCenterPage;
-import rozetka_page_objects.HomePage;
+import hwa_18.HelpCenterPage;
+import hwa_18.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,6 +18,5 @@ public class HelpCenterTests extends BaseTest {
         HelpCenterPage helpCenterPage = new HelpCenterPage(getDriver());
 
         Assert.assertEquals(HELP_PAGE_TEXT, helpCenterPage.getSearchResultPageTitle());
-
     }
 }

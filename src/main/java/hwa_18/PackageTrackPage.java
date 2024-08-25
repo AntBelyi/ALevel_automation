@@ -1,4 +1,4 @@
-package rozetka_page_objects;
+package hwa_18;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

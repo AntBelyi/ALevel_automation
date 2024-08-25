@@ -1,6 +1,6 @@
-import rozetka_page_objects.HomePage;
-import rozetka_page_objects.ProductDetailPage;
-import rozetka_page_objects.SearchResultPage;
+import hwa_18.HomePage;
+import hwa_18.ProductDetailPage;
+import hwa_18.SearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

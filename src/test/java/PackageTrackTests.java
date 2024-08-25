@@ -1,6 +1,6 @@
 import data_provider.RozetkaDP;
-import rozetka_page_objects.HomePage;
-import rozetka_page_objects.PackageTrackPage;
+import hwa_18.HomePage;
+import hwa_18.PackageTrackPage;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 

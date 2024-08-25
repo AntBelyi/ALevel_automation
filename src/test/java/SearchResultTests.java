@@ -1,5 +1,5 @@
-import rozetka_page_objects.HomePage;
-import rozetka_page_objects.SearchResultPage;
+import hwa_18.HomePage;
+import hwa_18.SearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,7 +18,6 @@ public class SearchResultTests extends BaseTest {
         SearchResultPage searchPage = new SearchResultPage(getDriver());
 
         Assert.assertTrue(searchPage.getSearchResultPageTitle().contains(wordToSearch));
-
     }
 }
 
