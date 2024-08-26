@@ -1,6 +1,6 @@
-import data_provider.RozetkaDP;
-import hw_aqa_3.HomePage;
-import hw_aqa_3.PackageTrackPage;
+package aqa_hw_18;
+
+import aqa_hw_18.data_provider.RozetkaDP;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 

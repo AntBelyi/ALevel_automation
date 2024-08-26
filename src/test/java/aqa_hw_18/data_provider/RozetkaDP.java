@@ -1,4 +1,4 @@
-package data_provider;
+package aqa_hw_18.data_provider;
 
 import org.testng.annotations.DataProvider;
 

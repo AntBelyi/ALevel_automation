@@ -1,6 +1,5 @@
-import hw_aqa_3.HomePage;
-import hw_aqa_3.ProductDetailPage;
-import hw_aqa_3.SearchResultPage;
+package aqa_hw_18;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

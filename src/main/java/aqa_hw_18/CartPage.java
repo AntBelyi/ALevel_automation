@@ -1,4 +1,4 @@
-package hw_aqa_3;
+package aqa_hw_18;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

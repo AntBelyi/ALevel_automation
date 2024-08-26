@@ -1,4 +1,5 @@
-import hw_aqa_3.*;
+package aqa_hw_18;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
