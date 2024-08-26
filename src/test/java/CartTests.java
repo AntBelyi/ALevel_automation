@@ -1,4 +1,4 @@
-import hwa_18.*;
+import hw_aqa_3.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,12 +14,12 @@ public class CartTests extends BaseTest {
 
         CartPage cartPage = new CartPage(getDriver());
 
-        Assert.assertTrue(cartPage.getPageTitle().contains(EMPTY_CART_TEXT) && cartPage.imageIsPresent());
-
+        Assert.assertTrue(cartPage.getPageTitle().contains(EMPTY_CART_TEXT));
+        Assert.assertTrue(cartPage.imageIsPresent());
     }
 
     @Test
-    public void verifyProductToCar() {
+    public void verifyAddProductToCart() {
         String wordToSearch = "iPhone";
         int navigateToProduct = 4;
 
@@ -40,7 +40,7 @@ public class CartTests extends BaseTest {
     }
 
     @Test
-    public void verifyProductToCartFromPdP(){
+    public void verifyAddProductToCartFromPdP(){
         String wordToSearch = "iPhone";
         int navigateToProduct = 4;
 

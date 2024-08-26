@@ -1,5 +1,5 @@
-import hwa_18.HomePage;
-import hwa_18.SearchResultPage;
+import hw_aqa_3.HomePage;
+import hw_aqa_3.SearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

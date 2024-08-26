@@ -1,6 +1,6 @@
 import data_provider.RozetkaDP;
-import hwa_18.HomePage;
-import hwa_18.PackageTrackPage;
+import hw_aqa_3.HomePage;
+import hw_aqa_3.PackageTrackPage;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
@@ -19,6 +19,6 @@ public class PackageTrackTests extends BaseTest
         packageTrackPage.typePackageNumberInput(packageNumber);
         packageTrackPage.clickPackageTrackButton();
 
-        Assert.assertTrue(packageTrackPage.getValidationMessage().equals(String.format(SEARCH_ERROR_MESSAGE, packageNumber)));
+        Assert.assertEquals(String.format(SEARCH_ERROR_MESSAGE, packageNumber), packageTrackPage.getValidationMessage());
     }
 }

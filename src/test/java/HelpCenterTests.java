@@ -1,6 +1,6 @@
 
-import hwa_18.HelpCenterPage;
-import hwa_18.HomePage;
+import hw_aqa_3.HelpCenterPage;
+import hw_aqa_3.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
