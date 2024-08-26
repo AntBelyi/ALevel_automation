@@ -1,7 +1,6 @@
 package hw_aqa_3;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +10,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class task1 {
+public class Task1 {
     public static void main(String[] args)  {
 
         WebDriver driver = new ChromeDriver();
@@ -24,10 +23,10 @@ public class task1 {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[title='Apple']")));
 
-        WebElement AppleButton = driver.findElement(By.cssSelector("[title='Apple']"));
-        AppleButton.click();
+        WebElement appleButton = driver.findElement(By.cssSelector("[title='Apple']"));
+        appleButton.click();
 
-        Assert.assertTrue(AppleButton.isDisplayed());
+        Assert.assertTrue(appleButton.isDisplayed());
 
         driver.quit();
     }

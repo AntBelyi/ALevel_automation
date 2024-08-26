@@ -11,7 +11,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class task3 {
+public class Task3 {
 
     public static void main(String[] args) {
 

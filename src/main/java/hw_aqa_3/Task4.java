@@ -11,13 +11,14 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class task4 {
+public class Task4 {
     public static void main(String[] args) {
 
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         driver.manage().window().maximize();
         driver.get("https://rozetka.com.ua/ua/");
+        String stringToFind = "Посилка прибула на відділення";
 
         WebElement trackTheParcel = driver.findElement(By.cssSelector("rz-menu-tracking"));
         trackTheParcel.click();
@@ -33,7 +34,7 @@ public class task4 {
 
         String resultText = resultTextElement.getText();
 
-        Assert.assertFalse(resultText.contains("resultTextElement"));
+        Assert.assertFalse(resultText.contains("stringToFind") , "За номером 12455784 посилку не знайдено");
 
         driver.quit();
 
