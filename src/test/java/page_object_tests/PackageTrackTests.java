@@ -1,6 +1,8 @@
-package aqa_hw_18;
+package page_object_tests;
 
-import aqa_hw_18.data_provider.RozetkaDP;
+import aqa_hw_18.HomePage;
+import aqa_hw_18.PackageTrackPage;
+import page_object_tests.data_provider.RozetkaDP;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
