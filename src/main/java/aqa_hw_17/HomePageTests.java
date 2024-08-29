@@ -1,4 +1,4 @@
-package hw_at_17;
+package aqa_hw_17;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -40,10 +40,8 @@ public class HomePageTests extends BaseTest {
         List<WebElement> searchResult = getDriver().findElements(By.cssSelector("[class='css-1wxaaza']"));
 
         for (WebElement element : searchResult) {
-            Assert.assertNotNull(element);
+            Assert.assertTrue(element.isDisplayed());
         }
-
-        assertFalse(searchResult.isEmpty());
     }
 
     @Test(priority = 2)
@@ -59,5 +57,4 @@ public class HomePageTests extends BaseTest {
 
         assertTrue(itemColor.contains(whiteColor));
     }
-
 }

@@ -1,6 +1,6 @@
-package hw_at_17;
+package aqa_hw_17;
 
-import hw_at_17.data_provider.SearchWordsData;
+import aqa_hw_17.data_provider.SearchWordsData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -25,14 +25,12 @@ public class SearchResultPageTests extends BaseTest {
         List<WebElement> searchResult = getDriver().findElements(By.cssSelector("[class='css-1wxaaza']"));
 
         for (WebElement element : searchResult) {
-            //System.out.println(element.getText());
             Assert.assertTrue(element.getText().toLowerCase().contains(wordToVerify) ||
                     element.getText().toLowerCase().contains(SEARCH_PRODUCT_TEXT_ADD1) ||
                     element.getText().toLowerCase().contains(SEARCH_PRODUCT_TEXT_ADD2));
         }
 
         Assert.assertTrue(searchResultText.isDisplayed());
-
     }
 
     @Test
@@ -46,7 +44,6 @@ public class SearchResultPageTests extends BaseTest {
         WebElement searchResultText = getDriver().findElement(By.cssSelector("[data-testid='total-count']"));
 
         Assert.assertTrue(searchResultText.getText().contains(" 0 "));
-
     }
 
     @Test
@@ -59,10 +56,7 @@ public class SearchResultPageTests extends BaseTest {
 
         WebElement searchResultText = getDriver().findElement(By.cssSelector("[data-testid='total-count']"));
 
-        System.out.println(searchResultText.getText());
-
         Assert.assertTrue(searchResultText.getText().contains(" 0 "));
-
     }
 
 }

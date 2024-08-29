@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Nagative Tests" verbose="1">
+    <test name="Negative Tests">
+        <classes>
+            <class name = "aqa_hw_17.SearchResultPageTests" />
+            <class name = "aqa_hw_17.SearchResultPageTests" >
+                <methods>
+                    <exclude name = "verifyPositiveSearchInput"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
