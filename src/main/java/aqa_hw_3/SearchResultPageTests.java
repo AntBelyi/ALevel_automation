@@ -1,4 +1,4 @@
-package aqa_hw_17;
+package aqa_hw_3;
 
 import aqa_hw_17.data_provider.SearchWordsData;
 import org.openqa.selenium.By;
