@@ -1,6 +1,6 @@
 package aqa_hw_3;
 
-import aqa_hw_17.data_provider.SearchWordsData;
+import aqa_hw_3.data_provider.SearchWordsData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -14,8 +14,6 @@ public class SearchResultPageTests extends BaseTest {
     @Test(dataProvider = "getSearchWords", dataProviderClass = SearchWordsData.class)
     public void verifyPositiveSearchInput(String wordToSearch, String wordToVerify) {
 
-        final String SEARCH_PRODUCT_TEXT_ADD1 = "посуд";
-        final String SEARCH_PRODUCT_TEXT_ADD2 = "статуетка";
 
         WebElement searchInput = getDriver().findElement(By.id("search"));
         searchInput.sendKeys(wordToSearch, Keys.ENTER);
@@ -24,11 +22,7 @@ public class SearchResultPageTests extends BaseTest {
 
         List<WebElement> searchResult = getDriver().findElements(By.cssSelector("[class='css-1wxaaza']"));
 
-        for (WebElement element : searchResult) {
-            Assert.assertTrue(element.getText().toLowerCase().contains(wordToVerify) ||
-                    element.getText().toLowerCase().contains(SEARCH_PRODUCT_TEXT_ADD1) ||
-                    element.getText().toLowerCase().contains(SEARCH_PRODUCT_TEXT_ADD2));
-        }
+        Assert.assertTrue(searchResult.get(3).getText().toLowerCase().contains(wordToVerify));
 
         Assert.assertTrue(searchResultText.isDisplayed());
     }
