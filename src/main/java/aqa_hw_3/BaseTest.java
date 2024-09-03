@@ -1,6 +1,6 @@
-package aqa_hw_17;
+package aqa_hw_3;
 
-import aqa_hw_17.listeners.CustomListener;
+import aqa_hw_3.listeners.CustomListener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
