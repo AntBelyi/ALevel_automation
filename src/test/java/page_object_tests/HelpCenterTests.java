@@ -1,7 +1,7 @@
 package page_object_tests;
 
-import aqa_hw_18.HelpCenterPage;
-import aqa_hw_18.HomePage;
+import aqa_hw_4.HelpCenterPage;
+import aqa_hw_4.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

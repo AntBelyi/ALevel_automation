@@ -1,9 +1,9 @@
 package page_object_tests;
 
-import aqa_hw_18.CartPage;
-import aqa_hw_18.HomePage;
-import aqa_hw_18.ProductDetailPage;
-import aqa_hw_18.SearchResultPage;
+import aqa_hw_4.CartPage;
+import aqa_hw_4.HomePage;
+import aqa_hw_4.ProductDetailPage;
+import aqa_hw_4.SearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

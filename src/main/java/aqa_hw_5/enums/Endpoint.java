@@ -1,4 +1,4 @@
-package aqa_hw_19.enums;
+package aqa_hw_5.enums;
 
 public enum Endpoint {
 

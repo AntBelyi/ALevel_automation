@@ -1,4 +1,4 @@
-package hw_15;
+package aqa_hw_1;
 
 import dev.failsafe.internal.util.Assert;
 import org.openqa.selenium.By;
