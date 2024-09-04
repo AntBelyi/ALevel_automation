@@ -34,7 +34,7 @@ public class Task4 {
 
         String resultText = resultTextElement.getText();
 
-        Assert.assertFalse(resultText.contains("stringToFind") , "За номером 12455784 посилку не знайдено");
+        Assert.assertFalse(resultText.contains(stringToFind) , "За номером 12455784 посилку не знайдено");
 
         driver.quit();
 
