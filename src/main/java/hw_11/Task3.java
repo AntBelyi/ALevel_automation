@@ -25,8 +25,8 @@ public class Task3 {
 
         Queue<String> newqueue = new LinkedList<>();
         System.out.println(newqueue);
-
-
+        System.out.println(newqueue.element());
+        System.out.println(newqueue);
     }
 }
 
