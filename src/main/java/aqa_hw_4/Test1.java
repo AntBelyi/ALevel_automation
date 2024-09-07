@@ -1,4 +1,4 @@
-package aqa_hw_2;
+package aqa_hw_4;
 
 import com.codeborne.selenide.SelenideElement;
 import dev.failsafe.internal.util.Assert;

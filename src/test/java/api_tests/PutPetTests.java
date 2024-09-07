@@ -1,15 +1,15 @@
 package api_tests;
 
-import aqa_hw_5.dto.CategoryDto;
-import aqa_hw_5.dto.PetDto;
-import aqa_hw_5.dto.TagDto;
-import aqa_hw_5.enums.Status;
+import aqa_hw_7.dto.CategoryDto;
+import aqa_hw_7.dto.PetDto;
+import aqa_hw_7.dto.TagDto;
+import aqa_hw_7.enums.Status;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
-import static aqa_hw_5.enums.Endpoint.BASE_URL;
+import static aqa_hw_7.enums.Endpoint.BASE_URL;
 import static io.restassured.RestAssured.given;
 
 public class PutPetTests {

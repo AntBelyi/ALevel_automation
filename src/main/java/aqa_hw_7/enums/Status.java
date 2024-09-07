@@ -1,4 +1,4 @@
-package aqa_hw_5.enums;
+package aqa_hw_7.enums;
 
 public enum Status {
     AVAILABLE("available"),

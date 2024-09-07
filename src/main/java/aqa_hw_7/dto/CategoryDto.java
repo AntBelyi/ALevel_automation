@@ -1,4 +1,4 @@
-package aqa_hw_5.dto;
+package aqa_hw_7.dto;
 
 public class CategoryDto {
     private int id;
