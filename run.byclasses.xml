@@ -4,8 +4,8 @@
 <suite name="All Tests" verbose="1">
     <test name="All Tests">
         <classes>
-            <class name = "aqa_hw_3.HomePageTests" />
-            <class name = "aqa_hw_3.SearchResultPageTests" >
+            <class name = "aqa_hw_5.HomePageTests" />
+            <class name = "aqa_hw_5.SearchResultPageTests" >
             </class>
         </classes>
     </test>

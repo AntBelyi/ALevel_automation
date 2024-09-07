@@ -4,10 +4,10 @@
 <suite name="Nagative Tests" verbose="1">
     <test name="Negative Tests">
         <classes>
-            <class name = "aqa_hw_3.SearchResultPageTests" />
-            <class name = "aqa_hw_3.SearchResultPageTests" >
+            <class name = "aqa_hw_5.SearchResultPageTests" >
                 <methods>
-                    <exclude name = "verifyPositiveSearchInput"/>
+                    <exclude name = "verifyNotPresentSearchInput"/>
+                    <exclude name = "verifyEmptySearchInput"/>
                 </methods>
             </class>
         </classes>

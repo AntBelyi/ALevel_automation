@@ -1,4 +1,4 @@
-package aqa_hw_3;
+package aqa_hw_5;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.List;
 
-import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 public class HomePageTests extends BaseTest {

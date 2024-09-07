@@ -1,6 +1,6 @@
-package aqa_hw_3;
+package aqa_hw_5;
 
-import aqa_hw_3.data_provider.SearchWordsData;
+import aqa_hw_5.data_provider.SearchWordsData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;

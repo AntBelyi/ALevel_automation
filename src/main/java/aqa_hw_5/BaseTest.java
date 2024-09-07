@@ -1,6 +1,6 @@
-package aqa_hw_3;
+package aqa_hw_5;
 
-import aqa_hw_3.listeners.CustomListener;
+import aqa_hw_5.listeners.CustomListener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -23,8 +23,8 @@ public class BaseTest {
         driver = new ChromeDriver();
 
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(200));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(200));
 
         driver.get("https://www.olx.ua");
     }
