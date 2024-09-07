@@ -1,6 +1,6 @@
-package aqa_hw_7.dto;
+package aqa_hw_9.dto;
 
-public class TagDto {
+public class CategoryDto {
     private int id;
     private String name;
 

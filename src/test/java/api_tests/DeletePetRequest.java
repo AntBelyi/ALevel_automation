@@ -4,7 +4,7 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static aqa_hw_7.enums.Endpoint.BASE_URL;
+import static aqa_hw_9.enums.Endpoint.BASE_URL;
 import static io.restassured.RestAssured.given;
 
 public class DeletePetRequest {

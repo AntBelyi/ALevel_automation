@@ -1,4 +1,4 @@
-package aqa_hw_7.dto;
+package aqa_hw_9.dto;
 
 import java.util.List;
 

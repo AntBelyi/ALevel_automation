@@ -1,11 +1,11 @@
 package api_tests;
 
-import aqa_hw_7.dto.PetDto;
+import aqa_hw_9.dto.PetDto;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static aqa_hw_7.enums.Endpoint.BASE_URL;
+import static aqa_hw_9.enums.Endpoint.BASE_URL;
 import static io.restassured.RestAssured.given;
 
 public class GetPetTests {
