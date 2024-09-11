@@ -1,6 +1,5 @@
-package hw_17;
+package hw_a3;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +8,6 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import java.time.Duration;
 import org.junit.Assert;
-import java.util.function.Function;
 
 public class Test2 {
     public static void main(String[] args) {
