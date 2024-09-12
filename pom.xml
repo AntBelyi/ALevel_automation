@@ -9,13 +9,11 @@
 
   <name>ALevel</name>
   <url>http://maven.apache.org</url>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.target>17</maven.compiler.target>
     <maven.compiler.source>17</maven.compiler.source>
   </properties>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -23,7 +21,7 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-      <dependency>
+    <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>4.24.0</version>
@@ -33,6 +31,5 @@
       <artifactId>testng</artifactId>
       <version>7.10.2</version>
     </dependency>
-
   </dependencies>
 </project>
