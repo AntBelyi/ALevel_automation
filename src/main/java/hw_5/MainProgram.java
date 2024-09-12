@@ -15,6 +15,5 @@ public class MainProgram {
         System.out.println(a1.x);
         System.out.println(a2.x);
 
-
     }
 }
