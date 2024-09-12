@@ -21,7 +21,6 @@
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
             <version>7.4.1</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -41,6 +40,13 @@
         </dependency>
 
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
