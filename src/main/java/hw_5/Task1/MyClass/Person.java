@@ -5,14 +5,12 @@ public class Person {
     private String surname;
     private int age;
 
-    // Конструктор
     public Person(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
         this.age = age;
     }
 
-    // Геттери
     public String getName() {
         return name;
     }
@@ -25,7 +23,6 @@ public class Person {
         return age;
     }
 
-    // Метод toString() для відображення інформації про особу
     @Override
     public String toString() {
         return "Person{" +
