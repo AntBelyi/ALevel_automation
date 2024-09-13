@@ -44,37 +44,37 @@ public class HomePageStepDefinition {
     }
 
     @When("User clicks on the cart icon")
-    public void iClickOnTheCartIcon() {
+    public void clickOnTheCartIcon() {
         homePage.clickCartIcon();
     }
 
     @Then("User should see a page with title containing 'Кошик порожній'")
-    public void iShouldSeePageWithTitleContaining() {
+    public void shouldSeePageWithTitleContaining() {
         Assert.assertTrue(cartPage.getPageTitle().contains(EMPTY_CART_TEXT));
     }
 
     @And("User should see an image on the cart page")
-    public void iShouldSeeAnImageOnTheCartPage() {
+    public void shouldSeeAnImageOnTheCartPage() {
         Assert.assertTrue(cartPage.imageIsPresent());
     }
 
     @When("User navigates to the package tracking page")
-    public void iNavigateToPackageTrackingPage() {
+    public void navigateToPackageTrackingPage() {
         homePage.clickPackageTrackLink();
     }
 
     @And("User enters an invalid package number")
-    public void iEnterAnInvalidPackageNumber() {
+    public void enterAnInvalidPackageNumber() {
         packageTrackPage.typePackageNumberInput(packageNumber);
     }
 
     @And("User clicks the track button")
-    public void iClickTheTrackButton() {
+    public void clickTheTrackButton() {
         packageTrackPage.clickPackageTrackButton();
     }
 
     @Then("User should see an error message")
-    public void iShouldSeeAnErrorMessage() {
+    public void shouldSeeAnErrorMessage() {
         String actualMessage = packageTrackPage.getValidationMessage();
         Assert.assertEquals(String.format(SEARCH_ERROR_MESSAGE, packageNumber), actualMessage);
     }
