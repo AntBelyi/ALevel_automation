@@ -4,11 +4,10 @@ import aqa_hw_18.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CartPage extends BasePage {
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.$;
 
-    public CartPage(WebDriver driver) {
-        super(driver);
-    }
+public class CartPage{
 
     private static final By CART_HEAD_TEXT = By.cssSelector(".cart-dummy__heading");
     private static final By CART_IMAGE = By.cssSelector("img[class=cart-dummy__illustration]");
@@ -16,22 +15,18 @@ public class CartPage extends BasePage {
     private static final By CART_PRODUCT_TITLE = By.cssSelector(".cart-product__title");
 
     public String getPageTitle() {
-        waitForElement(CART_HEAD_TEXT);
-        return getDriver().findElement(CART_HEAD_TEXT).getText();
+        return $(CART_HEAD_TEXT).shouldBe(visible).getText();
     }
 
     public boolean imageIsPresent() {
-        waitForElement(CART_IMAGE);
-        return getDriver().findElement(CART_IMAGE).isDisplayed();
+        return $(CART_IMAGE).shouldBe(visible).isDisplayed();
     }
 
     public boolean cartIsOpened() {
-        waitForElement(CART_LIST);
-        return getDriver().findElement(CART_LIST).isDisplayed();
+        return $(CART_LIST).shouldBe(visible).isDisplayed();
     }
 
     public String getProductTitle() {
-        waitForElement(CART_PRODUCT_TITLE);
-        return getDriver().findElement(CART_PRODUCT_TITLE).getText();
+        return $(CART_PRODUCT_TITLE).getText();
     }
 }
