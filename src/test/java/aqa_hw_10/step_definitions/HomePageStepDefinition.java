@@ -23,17 +23,17 @@ public class HomePageStepDefinition {
     private CartPage cartPage = new CartPage();
     private PackageTrackPage packageTrackPage = new PackageTrackPage();
 
-    @Given("I am on the Home Page")
+    @Given("User is on the Home Page")
     public void openHomepage() {
         homePage.openHomePage();
     }
 
-    @When("I click on the Help Center link")
+    @When("User clicks on the Help Center link")
     public void clickHelpCenterLink() {
         homePage.clickHelpCenterLink();
     }
 
-    @Then("I am navigated to the Help Center page")
+    @Then("User is navigated to the Help Center page")
     public void verifyHelpCenterPage() {
         Assert.assertTrue(helpCenterPage.isOnHelpCenterPage(), "Not on Help Center page");
     }
@@ -43,37 +43,37 @@ public class HomePageStepDefinition {
         Assert.assertEquals(helpCenterPage.getPageTitle(), HELP_PAGE_TEXT, "Page title does not match");
     }
 
-    @When("I click on the cart icon")
+    @When("User clicks on the cart icon")
     public void iClickOnTheCartIcon() {
         homePage.clickCartIcon();
     }
 
-    @Then("I should see a page with title containing 'Кошик порожній'")
+    @Then("User should see a page with title containing 'Кошик порожній'")
     public void iShouldSeePageWithTitleContaining() {
         Assert.assertTrue(cartPage.getPageTitle().contains(EMPTY_CART_TEXT));
     }
 
-    @And("I should see an image on the cart page")
+    @And("User should see an image on the cart page")
     public void iShouldSeeAnImageOnTheCartPage() {
         Assert.assertTrue(cartPage.imageIsPresent());
     }
 
-    @When("I navigate to the package tracking page")
+    @When("User navigates to the package tracking page")
     public void iNavigateToPackageTrackingPage() {
         homePage.clickPackageTrackLink();
     }
 
-    @And("I enter an invalid package number")
+    @And("User enters an invalid package number")
     public void iEnterAnInvalidPackageNumber() {
         packageTrackPage.typePackageNumberInput(packageNumber);
     }
 
-    @And("I click the track button")
+    @And("User clicks the track button")
     public void iClickTheTrackButton() {
         packageTrackPage.clickPackageTrackButton();
     }
 
-    @Then("I should see an error message")
+    @Then("User should see an error message")
     public void iShouldSeeAnErrorMessage() {
         String actualMessage = packageTrackPage.getValidationMessage();
         Assert.assertEquals(String.format(SEARCH_ERROR_MESSAGE, packageNumber), actualMessage);

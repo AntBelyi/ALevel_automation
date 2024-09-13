@@ -1,20 +1,20 @@
 Feature: Home Page Verification
 
   Scenario: Verify Help Center page title
-    Given I am on the Home Page
-    When I click on the Help Center link
-    Then I am navigated to the Help Center page
+    Given User is on the Home Page
+    When User clicks on the Help Center link
+    Then User is navigated to the Help Center page
     And the page title should be 'Найактуальніше'
 
   Scenario: Verify empty cart
-    Given I am on the Home Page
-    When I click on the cart icon
-    Then I should see a page with title containing 'Кошик порожній'
-    And I should see an image on the cart page
+    Given User is on the Home Page
+    When User clicks on the cart icon
+    Then User should see a page with title containing 'Кошик порожній'
+    And User should see an image on the cart page
 
   Scenario: Verify error message for invalid package number
-    Given I am on the Home Page
-    When I navigate to the package tracking page
-    And I enter an invalid package number
-    And I click the track button
-    Then I should see an error message
+    Given User is on the Home Page
+    When User navigates to the package tracking page
+    And User enters an invalid package number
+    And User clicks the track button
+    Then User should see an error message
