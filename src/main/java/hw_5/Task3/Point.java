@@ -2,9 +2,8 @@ package hw_5.Task3;
 
 public class Point {
 
-    public int x;
-
-    public int y;
+    int x;
+    int y;
 
     public Point(int x, int y) {
         this.x = x;
