@@ -1,8 +1,8 @@
 package aqa_hw_10;
 
-import aqa_hw_18.BasePage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+
+import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
@@ -15,7 +15,7 @@ public class CartPage{
     private static final By CART_PRODUCT_TITLE = By.cssSelector(".cart-product__title");
 
     public String getPageTitle() {
-        return $(CART_HEAD_TEXT).shouldBe(visible).getText();
+        return $(CART_HEAD_TEXT).shouldBe(visible, Duration.ofSeconds(20)).getText();
     }
 
     public boolean imageIsPresent() {

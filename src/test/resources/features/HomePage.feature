@@ -3,8 +3,8 @@ Feature: Home Page Verification
   Scenario: Verify Help Center page title
     Given User is on the Home Page
     When User clicks on the Help Center link
-    Then User is navigated to the Help Center page
-    And the page title should be 'Найактуальніше'
+    Then Verify user is navigated to the Help Center page
+    And Verify page title is 'Найактуальніше' on the Help Center page
 
   Scenario: Verify empty cart
     Given User is on the Home Page
@@ -15,6 +15,6 @@ Feature: Home Page Verification
   Scenario: Verify error message for invalid package number
     Given User is on the Home Page
     When User navigates to the package tracking page
-    And User enters an invalid package number
-    And User clicks the track button
+    When User enters an invalid package number
+    When User clicks the track button
     Then User should see an error message

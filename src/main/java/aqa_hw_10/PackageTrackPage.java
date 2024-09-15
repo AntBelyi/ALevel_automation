@@ -1,9 +1,5 @@
 package aqa_hw_10;
 
-import aqa_hw_18.BasePage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
