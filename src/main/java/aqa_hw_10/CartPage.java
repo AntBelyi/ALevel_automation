@@ -21,12 +21,4 @@ public class CartPage{
     public boolean imageIsPresent() {
         return $(CART_IMAGE).shouldBe(visible).isDisplayed();
     }
-
-    public boolean cartIsOpened() {
-        return $(CART_LIST).shouldBe(visible).isDisplayed();
-    }
-
-    public String getProductTitle() {
-        return $(CART_PRODUCT_TITLE).getText();
-    }
 }
