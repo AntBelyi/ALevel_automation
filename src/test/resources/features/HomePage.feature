@@ -4,7 +4,7 @@ Feature: Home Page Verification
     Given User is on the Home Page
     When User clicks on the Help Center link
     Then Verify user is navigated to the Help Center page
-    And Verify page title is 'Найактуальніше' on the Help Center page
+    And Verify page title is "Найактуальніше" on Help Center page
 
   Scenario: Verify empty cart
     Given User is on the Home Page

@@ -7,8 +7,6 @@ import org.testng.Assert;
 
 public class HelpCenterPageStepDefinition {
 
-    final String HELP_PAGE_TEXT = "Найактуальніше";
-
     private HelpCenterPage helpCenterPage = new HelpCenterPage();
 
     @Then("Verify user is navigated to the Help Center page")
@@ -16,8 +14,8 @@ public class HelpCenterPageStepDefinition {
         Assert.assertTrue(helpCenterPage.isOnHelpCenterPage(), "Not on Help Center page");
     }
 
-    @And("Verify page title is 'Найактуальніше' on the Help Center page")
-    public void verifyPageTitle() {
-        Assert.assertEquals(helpCenterPage.getPageTitle(), HELP_PAGE_TEXT, "Page title does not match");
+    @And("Verify page title is {string} on Help Center page")
+    public void verifyPageTitle(String expectedTitle) {
+        Assert.assertEquals(helpCenterPage.getPageTitle(), expectedTitle, "Page title does not match");
     }
 }
