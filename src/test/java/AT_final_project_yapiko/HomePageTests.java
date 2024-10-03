@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class HomePageTests extends BaseTest {
     @Test
     @Description("Verify that the call back form is opened when user click on call back button and closed when user click on close pop up button.")
-    @Feature("Home Page")
+    @Feature("Home Page feature")
     public void verifyCallBackFormCanBeOpenedAndClosed() {
 
         HomePage homePage = new HomePage();
@@ -26,7 +26,7 @@ public class HomePageTests extends BaseTest {
 
     @Test
     @Description("Negative Test: Verify that the empty Call back Form is not send and the error message is displayed.")
-    @Feature("Home Page")
+    @Feature("Home Page feature")
     public void verifyEmptyCallBackFormCanNotBeSend() {
         HomePage homePage = new HomePage();
 
@@ -43,7 +43,7 @@ public class HomePageTests extends BaseTest {
 
     @Test
     @Description("Verify that the user can switch the language.")
-    @Feature("Home Page")
+    @Feature("Home Page feature")
     public void verifyLanguageCanBeChanged() {
         String languageToChange = "en";
         HomePage homePage = new HomePage();
@@ -61,7 +61,7 @@ public class HomePageTests extends BaseTest {
 
     @Test
     @Description("Verify that the user can select the city.")
-    @Feature("Home Page")
+    @Feature("Home Page feature")
     public void verifyCityCanBeSwitched() {
         String cityToChoose = "Полтава";
         HomePage homePage = new HomePage();
@@ -77,7 +77,7 @@ public class HomePageTests extends BaseTest {
 
     @Test
     @Description("Verify that the complain pop up is opened when user click on the complain button and closed after click on the pop up complain button close.")
-    @Feature("Home Page")
+    @Feature("Home Page feature")
     public void verifyComplainPopUpCanBeOpenedAndClosed() {
         String popUpComplainTitle = "поскаржитись";
         HomePage homePage = new HomePage();
@@ -93,7 +93,7 @@ public class HomePageTests extends BaseTest {
 
     @Test
     @Description("Verify that the account pop up is opened when user click on the account button and closed after click on the pop up close button.")
-    @Feature("Home Page")
+    @Feature("Home Page feature")
     public void verifyAccountPopUpCanBeOpenedAndClosed() {
         String titleText = "авторизація";
         HomePage homePage = new HomePage();
@@ -109,7 +109,7 @@ public class HomePageTests extends BaseTest {
 
     @Test
     @Description("Negative Test: Verify that the user cannot register if not all fields of the registration form are filled out and user see the mistake message.")
-    @Feature("Home Page")
+    @Feature("Home Page feature")
     public void verifyRegistrationFormCanBeFilledOut() {
         String numberToEnter = "999998888";
         String mistakeText = "something went wrong with recaptcha";
