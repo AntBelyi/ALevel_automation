@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="All Tests" verbose="1">
+    <listeners>
+        <listener class-name="AT_final_project_yapiko.listeners.MyCustomListener"/>
+    </listeners>
+    <test name="Positive Tests">
+        <classes>
+            <class name="AT_final_project_yapiko.HomePageTests">
+                <methods>
+                    <exclude name="verifyEmptyCallBackFormCanNotBeSend"/>
+                    <exclude name="verifyRegistrationFormCanBeFilledOut"/>
+                </methods>
+            </class>
+            <class name="AT_final_project_yapiko.SearchResultsPageTests">
+                <methods>
+                    <exclude name="verifyPageIsOpenedCorrectlyByWrongKey"/>
+                </methods>
+            </class>
+            <class name="AT_final_project_yapiko.ProductDetailPageTests"/>
+            <class name="AT_final_project_yapiko.BasketPageTests"/>
+            <class name="AT_final_project_yapiko.SubmenuProductPageTests"/>
+        </classes>
+    </test>
+    <test name="Negative Tests">
+        <classes>
+            <class name="AT_final_project_yapiko.HomePageTests">
+                <methods>
+                    <include name="verifyEmptyCallBackFormCanNotBeSend"/>
+                    <include name="verifyRegistrationFormCanBeFilledOut"/>
+                </methods>
+            </class>
+            <class name="AT_final_project_yapiko.SearchResultsPageTests">
+                <methods>
+                    <include name="verifyPageIsOpenedCorrectlyByWrongKey"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
