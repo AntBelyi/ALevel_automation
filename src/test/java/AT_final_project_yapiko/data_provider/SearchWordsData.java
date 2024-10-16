@@ -7,7 +7,7 @@ public class SearchWordsData {
     public Object[][] getSearchWords() {
         return new Object[][] {
                 {"сет", "сет"},
-                {"піца", "піца"},
+                {"піц", "піц"},
                 {"суші", "суші"}
         };
     }
