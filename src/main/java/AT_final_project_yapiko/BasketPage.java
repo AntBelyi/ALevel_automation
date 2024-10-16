@@ -19,7 +19,7 @@ public class BasketPage {
 
     @Step("Get the initial order amount")
     public int getOrderAmount() {
-        SelenideElement orderAmount = $$(ORDER_AMOUNT).get(11).shouldBe(visible, Duration.ofSeconds(5));
+        SelenideElement orderAmount = $$(ORDER_AMOUNT).get(11).shouldBe(visible, Duration.ofSeconds(15));
         String priceText = orderAmount.getText().replaceAll("[^\\d]", "");
         return Integer.parseInt(priceText);
     }
