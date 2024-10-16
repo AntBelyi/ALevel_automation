@@ -4,6 +4,21 @@
     <listeners>
         <listener class-name="AT_final_project_yapiko.listeners.MyCustomListener"/>
     </listeners>
+    <test name="Negative Tests">
+        <classes>
+            <class name="AT_final_project_yapiko.HomePageTests">
+                <methods>
+                    <include name="verifyEmptyCallBackFormCanNotBeSend"/>
+                    <include name="verifyRegistrationFormCanBeFilledOut"/>
+                </methods>
+            </class>
+            <class name="AT_final_project_yapiko.SearchResultsPageTests">
+                <methods>
+                    <include name="verifyPageIsOpenedCorrectlyByWrongKey"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
     <test name="Positive Tests">
         <classes>
             <class name="AT_final_project_yapiko.HomePageTests">
@@ -22,19 +37,5 @@
             <class name="AT_final_project_yapiko.SubmenuProductPageTests"/>
         </classes>
     </test>
-    <test name="Negative Tests">
-        <classes>
-            <class name="AT_final_project_yapiko.HomePageTests">
-                <methods>
-                    <include name="verifyEmptyCallBackFormCanNotBeSend"/>
-                    <include name="verifyRegistrationFormCanBeFilledOut"/>
-                </methods>
-            </class>
-            <class name="AT_final_project_yapiko.SearchResultsPageTests">
-                <methods>
-                    <include name="verifyPageIsOpenedCorrectlyByWrongKey"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+
 </suite>

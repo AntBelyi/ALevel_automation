@@ -34,7 +34,7 @@ public class HomePage {
     private static final String MODAL_POPUP_COMPLAIN = "[class='modal-inner-wrap']";
     private static final String MODAL_POPUP_COMPLAIN_TITLE = "[id='modal-title-22']";
     private static final String MODAL_POPUP_CLOSE_BUTTON = ".modal-header .action-close";
-    private static final String ACCOUNT_BUTTON = "[class='link-name']";
+    private static final String ACCOUNT_BUTTON = "[class='link authorization-link']";
     private static final String ACCOUNT_POPUP = "[class='modal-inner-wrap']";
     private static final String ACCOUNT_POPUP_TITLE = "[class='block-title']";
     private static final String ACCOUNT_POPUP_CLOSE_BUTTON = "[class='action-close']";
